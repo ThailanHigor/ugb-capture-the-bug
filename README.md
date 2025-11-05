@@ -1,14 +1,7 @@
-# 🐞 UGB - Capture the Bug - 01
+# 🐞 UGB - Capture the Bug - 02
 
 ### Descrição
-O endpoint `/api/products/` deveria listar todos os produtos cadastrados no banco.
-Mas algo está quebrado — ele retorna 404.
+A rota `/home` deveria retornar uma página HTML mas parece que tem algo errado no códio!
 
 ### Seu objetivo
-Corrigir o projeto para que o endpoint funcione e retorne uma lista JSON de produtos, assim:
-
-```json
-[
-  {"id": 1, "name": "Caneta", "price": "3.50"},
-  {"id": 2, "name": "Caderno", "price": "15.00"}
-]
+Corrigir o projeto para que o projeto rode e você consiga acessar /home
