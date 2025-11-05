@@ -1,12 +1,17 @@
-# 🐞 UGB - Capture the Bug - 03
+# 🐞 UGB - Capture the Bug - 04
 
 ### Descrição  
-O setor de produtos está em pânico! 
-O responsável tentou cadastrar um novo item pelo painel administrativo, mas o formulário simplesmente **não aparece para preencher os dados**.  
-Nenhuma mensagem de erro é exibida, é como se sumisse no ar ou nem existisse!  
+O time de vendas está desesperado!
+O projeto até executa porém, eles tentam cadastrar novos produtos pelo formulário, a página até confirma o envio... mas **nada aparece no banco de dados**.  
+Nenhum erro é mostrado, nenhum aviso..
+Também não consigo ver a lista de todos os produtos cadastrados.
 
-A senha do admin que me passaram era **admin/admin**
+---
 
 ### Seu objetivo  
-Investigue o código e **corrija o problema que impede o cadastro de novos produtos** no admin.  
-Verifique modelos, registros no admin, e qualquer configuração que possa estar atrapalhando o salvamento dos dados.  
+Investigue o código e descubra **por que os produtos não estão sendo salvos**.  
+
+Verifique:
+- Se o `form.is_valid()` está sendo usado corretamente  
+- Se há algum passo faltando no processo de salvamento do formulário ou varíavel incorreta  
+- E se o redirecionamento acontece antes do salvamento  
