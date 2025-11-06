@@ -1,18 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .models import Product
-from .forms import ProductForm
+from .serializers import ProductSerializer
 
-def product_list(request):
-    products = Product.objects.all()
-    return render(request, "products/list.html", {"products": products})
-
-def product_edit(request, pk):
-    product = get_object_or_404(Product, pk=pk)
-    if request.method == "POST":
-        form = ProductForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("product_list")
-    else:
-        form = ProductForm(instance=product)
-    return render(request, "products/form.html", {"form": form})
+@api_view(['GET'])
+def product_list_api(request):
+    queryset = Product.objects.all()
+    return Response(queryset)

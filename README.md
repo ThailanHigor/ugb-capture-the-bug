@@ -1,13 +1,7 @@
-# 🐞 UGB - Capture the Bug - 06
+# 🐞 UGB - Capture the Bug - 07
 
 ### Descrição
-O formulário de edição de produtos parece funcionar perfeitamente, ele abre, mostra os dados e até exibe a mensagem de sucesso. Mas o preço **nunca atualiza!**  
+O Backend cridou uma API retorna os produtos, mas o front reclama que o JSON está inválido e quebrando.  
 
-### Seu objetivo
-Corrigir a view responsável pelo formulário de edição para que o produto seja **realmente atualizado** ao salvar.
-
-### Dicas
-- Verifique o uso do `ModelForm` e se a instância do objeto está sendo passada corretamente.
-- Teste o formulário e confira se todos os campos são atualizados corretamente.
-- Fique atento ao método `form.save()` e ao parâmetro `instance`.
-
+### Objetivo
+Retornar corretamente os produtos solicitados pelo front.
