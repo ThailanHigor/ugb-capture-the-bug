@@ -1,12 +1,9 @@
-# 🐞 UGB - Capture the Bug - 21
+# 🐞 UGB - Capture the Bug - 22
 
 ### Descrição
-O sistema de produtos deve ser acessado apenas por **usuários autenticados**.  
-No entanto, atualmente qualquer visitante consegue acessar a página de cadastro ou edição de produtos e até salvar dados indevidamente. O sistema deveria permitir ver a lista sem autenticação mas cadastrar e editar somente autenticado.
+O front-end consome a API (/api/products) de produtos e espera o **preço real** (`price`) de cada produto.  
+No entanto, parece que os valores retornados estão **errados**.
+
 
 ### Objetivo
-Corrigir as views para que apenas usuários logados possam acessar:
-
-1. Cadastro de produtos  
-2. Edição de produtos  
-3. Listagem se necessário  (sem autenticar) 
+Corrigir o serializer para que retorne (no GET) o valor correto dos campos da API de acordo com o MODELO. 
