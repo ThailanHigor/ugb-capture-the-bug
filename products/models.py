@@ -12,6 +12,3 @@ class Product(models.Model):
         ordering = ["-created_at"]
         verbose_name = "Produto"
         verbose_name_plural = "Produtos"
-
-    def __str__(self):
-        return f"{self.name}"

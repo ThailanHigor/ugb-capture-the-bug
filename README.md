@@ -1,7 +1,10 @@
-# 🐞 UGB - Capture the Bug - 07
+# 🐞 UGB - Capture the Bug - 08
 
 ### Descrição
-O Backend cridou uma API retorna os produtos, mas o front reclama que o JSON está inválido e quebrando.  
+Deu ruim!  
+A galera da equipe do Makerting entrou no admin para conferir os produtos cadastrados, mas todos aparecem estranhos e ninguém consegue identificar qual produto é qual.  
 
-### Objetivo
-Retornar corretamente os produtos solicitados pelo front.
+O problema está deixando a equipe frustrada e atrasando as decisões de estoque e vendas.  
+
+### Seu objetivo
+Investigue o modelo `Product` e corrija para que o Django admin mostre o **nome real de cada produto** e não haja mais este problema.

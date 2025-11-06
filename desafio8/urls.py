@@ -1,5 +1,5 @@
 """
-URL configuration for desafio7 project.
+URL configuration for desafio8 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -18,6 +18,5 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('products.urls')), # talvez isso não deve estar aqui.. Será código errado e que não foi removido?
+    path('admin/', admin.site.urls)
 ]
