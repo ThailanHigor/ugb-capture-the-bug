@@ -1,9 +1,9 @@
-# 🐞 UGB - Capture the Bug - 18
+# 🐞 UGB - Capture the Bug - 19
 
 ### Descrição
-O setor administrativo quer poder buscar produtos por nome na lista.  
-Existe um campo de pesquisa no topo da lista, mas mesmo digitando algo, o resultado **não filtra os produtos**.
+O setor de marketing decidiu e quer cadastrar imagens junto com os produtos.  
+O formulário permite escolher uma imagem, mas após enviar, nenhuma imagem aparece na lista ou no banco.
 
 
 ### Objetivo
-Corrigir a para que o filtro funcione corretamente e apenas produtos cujo nome contenha o termo pesquisado sejam exibidos  
+Corrigir o formulário e a view para que o campo de imagem funcione corretamente, o arquivo seja salvo no modelo e a imagem apareça na listagem de produtos  

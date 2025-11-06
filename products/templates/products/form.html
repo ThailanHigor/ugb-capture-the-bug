@@ -9,7 +9,7 @@
   <h1 class="mb-4">Cadastrar Produto</h1>
 
   <form method="post">
-    {% csrf_token %}  <!-- ✅ Corrigido: token CSRF -->
+    {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">Salvar</button>
     <a href="{% url 'produto_list' %}" class="btn btn-secondary">Voltar à Lista</a>

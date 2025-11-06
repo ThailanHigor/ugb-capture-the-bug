@@ -4,15 +4,15 @@ from .models import Product
 
 
 def create_product(request):
-    form = ProductForm(request.POST or None)
     if request.method == "POST":
-        response = redirect("produto_list")
-        form.save()
-        return response
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("produto_list")
+    else:
+        form = ProductForm()
     return render(request, "products/form.html", {"form": form})
-
 
 def list_products(request):
     products = Product.objects.all()
-    query = request.GET.get("q")
     return render(request, "products/list.html", {"products": products})

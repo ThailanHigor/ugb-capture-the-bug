@@ -8,10 +8,7 @@
 <body class="container py-4">
   <h1 class="mb-4">Produtos Cadastrados</h1>
 
-  <form method="get" class="mb-3 d-flex flex-column flex-md-row gap-2">
-    <input type="text" name="q" class="form-control" placeholder="Buscar produto">
-    <button type="button" class="btn btn-primary mt-2">Buscar</button>
-  </form>
+  <a href="{% url 'produto_create' %}" class="btn btn-success mb-3">Adicionar Produto</a>
 
   <table class="table table-striped">
     <thead>
@@ -19,7 +16,7 @@
         <th>Nome</th>
         <th>Descrição</th>
         <th>Preço</th>
-        <th>Categoria</th>
+        <th>Imagem</th>
         <th>Ativo</th>
         <th>Criado em</th>
       </tr>
@@ -30,13 +27,19 @@
         <td>{{ product.name }}</td>
         <td>{{ product.description }}</td>
         <td>{{ product.price }}</td>
-        <td>{% if product.category %}{{ product.category.name }}{% else %}-{% endif %}</td>
+        <td>
+          {% if product.image %}
+            <img src="" alt="{{ product.name }}" width="100">
+          {% else %}
+            -
+          {% endif %}
+        </td>
         <td>{{ product.active }}</td>
         <td>{{ product.created_at }}</td>
       </tr>
       {% empty %}
       <tr>
-        <td colspan="6" class="text-center">Nenhum produto encontrado.</td>
+        <td colspan="6" class="text-center">Nenhum produto cadastrado.</td>
       </tr>
       {% endfor %}
     </tbody>
