@@ -8,17 +8,15 @@
 <body class="container py-4">
   <h1 class="mb-4">Produtos Cadastrados</h1>
 
-  <a href="{% url 'produto_create' %}" class="btn btn-success mb-3">Adicionar Produto</a>
-
   <table class="table table-striped">
     <thead>
       <tr>
         <th>Nome</th>
         <th>Descrição</th>
         <th>Preço</th>
-        <th>Imagem</th>
         <th>Ativo</th>
         <th>Criado em</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -27,15 +25,11 @@
         <td>{{ product.name }}</td>
         <td>{{ product.description }}</td>
         <td>{{ product.price }}</td>
-        <td>
-          {% if product.image %}
-            <img src="" alt="{{ product.name }}" width="100">
-          {% else %}
-            -
-          {% endif %}
-        </td>
         <td>{{ product.active }}</td>
         <td>{{ product.created_at }}</td>
+        <td>
+          <a href="{% url 'produto_edit' product.pk %}" class="btn btn-sm btn-primary">Editar</a>
+        </td>
       </tr>
       {% empty %}
       <tr>

@@ -1,9 +1,7 @@
-# 🐞 UGB - Capture the Bug - 19
+# 🐞 UGB - Capture the Bug - 20
 
 ### Descrição
-O setor de marketing decidiu e quer cadastrar imagens junto com os produtos.  
-O formulário permite escolher uma imagem, mas após enviar, nenhuma imagem aparece na lista ou no banco.
-
+O setor administrativo está tentando editar um produto mas não está conseguindo e não aparece nenhum erro.
 
 ### Objetivo
-Corrigir o formulário e a view para que o campo de imagem funcione corretamente, o arquivo seja salvo no modelo e a imagem apareça na listagem de produtos  
+Identifique o problema e corrija para que o fomrulário de edição funciona  
