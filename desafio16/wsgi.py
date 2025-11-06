@@ -1,5 +1,5 @@
 """
-WSGI config for desafio15 project.
+WSGI config for desafio16 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'desafio15.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'desafio16.settings')
 
 application = get_wsgi_application()
