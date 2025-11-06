@@ -1,8 +1,9 @@
-# 🐞 UGB - Capture the Bug - 10
+# 🐞 UGB - Capture the Bug - 11
 
 ### Descrição
-O time de produtos preparou um formulário para cadastrar novos produtos, mas algo estranho acontece:  
-O formulário **aparece normalmente**, todos os campos podem ser preenchidos, mas o botão **"Salvar" não faz nada**.  
+O formulário para cadastrar produtos está travando a equipe! 
+O Campo de **descrição** nem sempre terá informações e antes conseguiamos cadastrar sem essa informação.
+
 
 ### Objetivo
-Fazer o formulário salvar os dados!
+Resolver a vida dos usuários e fazer o form funcionar.

@@ -12,7 +12,7 @@ def create_product(request):
     if request.method == "POST":
         form = ProductForm(request.POST)
         if form.is_valid():
-            form.salvar()
+            form.save()
             return redirect("produto_list")
     else:
         form = ProductForm()

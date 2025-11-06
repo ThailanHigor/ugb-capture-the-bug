@@ -12,7 +12,8 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="button" class="btn btn-primary">Salvar</button>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a href="{% url 'produto_list' %}" class="btn btn-secondary">Voltar à Lista</a>
   </form>
 </body>
 </html>
