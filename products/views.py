@@ -3,17 +3,14 @@ from .forms import ProductForm
 from .models import Product
 
 
+def create_product(request):
+    form = ProductForm(request.POST or None)
+    if request.method == "POST":
+        response = redirect("produto_list")
+        form.save()  # nunca é validado
+        return response
+    return render(request, "products/form.html", {"form": form})
+
 def list_products(request):
     products = Product.objects.all()
     return render(request, "products/list.html", {"products": products})
-
-def create_product(request):
-    if request.method == "GET":
-        form = ProductForm(request.POST)
-        response = redirect("produto_list")
-        if form.is_valid():
-            form.save()
-        return response
-    else:
-        form = ProductForm()
-    return render(request, "products/form.html", {"form": form})
