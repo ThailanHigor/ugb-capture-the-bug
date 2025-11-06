@@ -1,9 +1,9 @@
-# 🐞 UGB - Capture the Bug - 11
+# 🐞 UGB - Capture the Bug - 12
 
 ### Descrição
-O formulário para cadastrar produtos está travando a equipe! 
-O Campo de **descrição** nem sempre terá informações e antes conseguiamos cadastrar sem essa informação.
-
+O time de front-end está trabalhando em uma dashboard de produtos que consome (GET) nossa API no endpoint **/api/products**.  
+Eles perceberam que, mesmo a requisição retornando **status 200**, **nenhum dado aparece na tela**.  
+Isso está impedindo a exibição da lista de produtos e travando a interface.
 
 ### Objetivo
-Resolver a vida dos usuários e fazer o form funcionar.
+Retornar corretamente os produtos seja uma lista vazia ou com os dados.
