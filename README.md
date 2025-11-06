@@ -1,19 +1,9 @@
-# 🐞 UGB - Capture the Bug - 17
+# 🐞 UGB - Capture the Bug - 18
 
 ### Descrição
-O setor administrativo quer cadastrar produtos com categorias definidas e preços positivos.  
-Porém, o formulário apresenta vários problemas:
+O setor administrativo quer poder buscar produtos por nome na lista.  
+Existe um campo de pesquisa no topo da lista, mas mesmo digitando algo, o resultado **não filtra os produtos**.
 
-1. O campo **categoria** aparece vazio, mesmo com categorias cadastradas no banco.  
-2. O formulário está aceitando dados inválidos como a questão do preço negativo.  
-3. Não existe validação para impedir que **preço seja menor que zero**.
-
-O formulário funciona parcialmente, mas o sistema aceita produtos com valores inválidos ou sem categoria.  
-Isso causa problemas na listagem e no processamento de produtos.
 
 ### Objetivo
-Corrigir o formulário e a view para que:
-
-- A lista de categorias apareça corretamente  
-- O formulário valide os dados 
-- Preço negativo não seja permitido  
+Corrigir a para que o filtro funcione corretamente e apenas produtos cujo nome contenha o termo pesquisado sejam exibidos  
