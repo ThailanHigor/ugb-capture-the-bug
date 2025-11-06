@@ -1,9 +1,14 @@
-# 🐞 UGB - Capture the Bug - 22
+# 🐞 UGB - Capture the Bug - 23
 
 ### Descrição
-O front-end consome a API (/api/products) de produtos e espera o **preço real** (`price`) de cada produto.  
-No entanto, parece que os valores retornados estão **errados**.
+O front-end consome a API de produtos e percebe problemas graves:
 
+1. Mesmo quando algo dá errado, a API retorna **status 200 OK**  
+2. Ao tentar retornar uma lista de produtos, a API lança erro
 
 ### Objetivo
-Corrigir o serializer para que retorne (no GET) o valor correto dos campos da API de acordo com o MODELO. 
+Corrigir a API para que:
+
+1. Retorne **status HTTP correto** em caso de erro  
+2. Retorne a lista de produtos
+3. A API seja consistente e previsível com seus STATUS CODES

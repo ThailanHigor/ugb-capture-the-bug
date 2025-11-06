@@ -3,8 +3,14 @@ from rest_framework.response import Response
 from .models import Product
 from .serializers import ProductSerializer
 
-@api_view(['POST'])
-def products_list(request):
-    products = Product.objects.all()
-    serializer = ProductSerializer(products, many=True)
-    return Response(serializer.data)
+@api_view(['GET', 'GET'])
+def products_api(request):
+    if request.method == 'POST':
+        serializer = ProductSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)  # parece não estar retornando erro se inválido
+    else: 
+        products = Product.objects.all()
+        serializer = ProductSerializer(products) # deveria retornar muitos
+        return Response(serializer.data)
