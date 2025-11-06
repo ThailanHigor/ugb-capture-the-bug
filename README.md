@@ -1,9 +1,12 @@
-# 🐞 UGB - Capture the Bug - 14
+# 🐞 UGB - Capture the Bug - 15
 
 ### Descrição
-O front-end tenta atualizar produtos existentes via API, usando um PUT para `/api/products/<id>/`.  
-Mas, ao invés de atualizar o produto, a API **cria um novo** com os mesmos dados.  
-Isso está gerando duplicações e confusão no banco.
+O front-end precisa criar novos produtos via API em `/api/products/`.  
+No entanto, não está conseguindo listar os produtos e sempre que tenta enviar os dados via JSON, e recebe:
+
+```json
+405 Method Not Allowed
+```
 
 ### Objetivo
-Fazer o PUT atualizar e não criar.
+Corrigir o ednpoint de create

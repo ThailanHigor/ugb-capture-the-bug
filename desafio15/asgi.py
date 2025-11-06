@@ -1,5 +1,5 @@
 """
-ASGI config for desafio14 project.
+ASGI config for desafio15 project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'desafio14.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'desafio15.settings')
 
 application = get_asgi_application()
