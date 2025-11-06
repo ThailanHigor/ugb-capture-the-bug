@@ -24,7 +24,7 @@
         <td>R$ {{ product.price }}</td>
         <td>{{ product.active|yesno:"Ativo,Inativo" }}</td>
         <td>
-          <a href="{% url 'product_edit' product.pk %}" class="btn btn-warning btn-sm">Editar</a>
+          <a href="{% url 'produto_detalhe' product.pk %}" class="btn btn-warning btn-sm">Editar</a>
         </td>
       </tr>
       {% empty %}
