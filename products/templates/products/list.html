@@ -2,31 +2,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de Produtos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <title>Lista de Produtos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="p-4">
-    <h1>Produtos disponíveis</h1>
-    <table class="table table-striped mt-3">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Preço</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for produto in produtos %}
-            <tr>
-                <td>{{ produto.name }}</td>
-                <td>R$ {{ produto.price }}</td>
-                <td>
-                    <a href="{% url 'detail_product' %}" class="btn btn-primary btn-sm">Ver Detalhes</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<body class="container py-4">
+  <h1 class="mb-4">Lista de Produtos</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products %}
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>R$ {{ product.price }}</td>
+        <td>{{ product.active|yesno:"Ativo,Inativo" }}</td>
+        <td>
+          <a href="{% url 'product_edit' product.pk %}" class="btn btn-warning btn-sm">Editar</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="4" class="text-center">Nenhum produto cadastrado.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </body>
 </html>

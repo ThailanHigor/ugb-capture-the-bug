@@ -1,7 +1,13 @@
-# 🐞 UGB - Capture the Bug - 05
+# 🐞 UGB - Capture the Bug - 06
 
 ### Descrição
-O botão **“Ver Detalhes”** da lista de produtos leva para uma página inexistente (`/produto/`), gerando erro **404**.  
+O formulário de edição de produtos parece funcionar perfeitamente, ele abre, mostra os dados e até exibe a mensagem de sucesso. Mas o preço **nunca atualiza!**  
 
 ### Seu objetivo
-Corrigir o problema para que o link de “Ver Detalhes” leve corretamente ao produto escolhido.
+Corrigir a view responsável pelo formulário de edição para que o produto seja **realmente atualizado** ao salvar.
+
+### Dicas
+- Verifique o uso do `ModelForm` e se a instância do objeto está sendo passada corretamente.
+- Teste o formulário e confira se todos os campos são atualizados corretamente.
+- Fique atento ao método `form.save()` e ao parâmetro `instance`.
+
