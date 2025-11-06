@@ -1,14 +1,8 @@
-# 🐞 UGB - Capture the Bug - 23
+# 🐞 UGB - Capture the Bug - 23.1
 
 ### Descrição
-O front-end consome a API de produtos e percebe problemas graves:
-
-1. Mesmo quando algo dá errado, a API retorna **status 200 OK**  
-2. Ao tentar retornar uma lista de produtos, a API lança erro
+O front-end precisa exibir apenas os produtos ativos, mas percebe que o filtro **não tem efeito** e um erro é exibido.  
+O back-end aparentemente faz a filtragem, mas todos os produtos continuam sendo retornados.
 
 ### Objetivo
-Corrigir a API para que:
-
-1. Retorne **status HTTP correto** em caso de erro  
-2. Retorne a lista de produtos
-3. A API seja consistente e previsível com seus STATUS CODES
+Corrigiro filtro para a equipe de front-end obtenha somente os produtos ativos
