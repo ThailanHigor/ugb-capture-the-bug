@@ -4,43 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Produtos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body class="bg-light">
-    <div class="container py-5">
-        <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                <h4 class="mb-0">Lista de Produtos</h4>
-                <a href="{% url 'create_product' %}" class="btn btn-light btn-sm">+ Novo Produto</a>
-            </div>
-            <div class="card-body">
-                {% if products %}
-                    <table class="table table-hover align-middle">
-                        <thead class="table-secondary">
-                            <tr>
-                               <th>Nome</th>
-                               <th>Preço</th>
-                               <th>Ativo</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for p in products %}
-                                <tr>
-                                    <td>{{ p.name }}</td>
-                                    <td>R$ {{ p.price }}</td>
-                                    <td>{% if p.active %}Sim{% else %}Não{% endif %}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                {% else %}
-                    <div class="alert alert-warning text-center">
-                        Nenhum produto cadastrado ainda.
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
+<body class="p-4">
+    <h1>Produtos disponíveis</h1>
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produto in produtos %}
+            <tr>
+                <td>{{ produto.name }}</td>
+                <td>R$ {{ produto.price }}</td>
+                <td>
+                    <a href="{% url 'detail_product' %}" class="btn btn-primary btn-sm">Ver Detalhes</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
